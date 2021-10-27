@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checar Nacionalidade Brasileira</title>
+    <style>
+        body {
+            background: rgb(180, 240, 121);
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste Nacionalidade Brasileira</h1>
+    País de origem: <input type="text" name="txt1" id="txt1">
+    <input type="button" value="Verificar" onclick="analisar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function analisar() {
+            var nac = window.document.querySelector('input#txt1')
+            var res = window.document.querySelector('div#res')
+            var nac1 = (nac.value)
+            res.innerHTML = `<p>Você é do(a) ${nac1} portanto,</p>`
+            if (nac1 == 'Brasil' || nac1 == 'brasil') {
+                res.innerHTML += `<p>Você é Brasileiro</p>`
+            } else {
+                res.innerHTML = `<p>Você é Estrangeiro</p>`
+            }
+        }
+
+    </script>
+</body>
+</html>
